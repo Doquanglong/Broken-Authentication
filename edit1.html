@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Edit Page 1</title>
+</head>
+<body>
+    <a href="page1.html">&lt;-- Back to Page 1</a>
+    <h1>Edit Page 1</h1>
+
+    <textarea id="editor">
+<h1>Testing</h1>
+<h1>Woo</h1>
+<p>Testing out this new micro-CMS!</p>
+    </textarea><br>
+    <button onclick="save()">Save</button>
+
+    <h2>Preview:</h2>
+    <div id="preview"></div>
+
+    <script>
+        function save() {
+            const content = document.getElementById('editor').value;
+            document.getElementById('preview').innerHTML = content;
+        }
+    </script>
+</body>
+</html>

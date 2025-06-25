@@ -1,0 +1,27 @@
+<!-- edit2.html -->
+<!doctype html>
+<html>
+<head>
+    <title>Edit Admin Page</title>
+</head>
+<body>
+    <a href="page2.html">&lt;-- Try to view page (will be denied)</a>
+    <h1>Edit Admin Page</h1>
+
+    <textarea id="editor" style="width: 100%; height: 200px;">
+<h1>Secret Admin Stuff</h1>
+<p>This is a restricted page only for admin eyes.</p>
+    </textarea><br>
+    <button onclick="save()">Save</button>
+
+    <h2>Preview:</h2>
+    <div id="preview" style="border: 1px solid #ccc; padding: 10px;"></div>
+
+    <script>
+        function save() {
+            const content = document.getElementById('editor').value;
+            document.getElementById('preview').innerHTML = content;
+        }
+    </script>
+</body>
+</html>
